@@ -1,0 +1,26 @@
+---
+services:
+  sshwifty:
+    image: 'niruix/sshwifty:latest'
+    container_name: ${CONTAINER_NAME}
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - SSHWIFTY_DIALTIMEOUT=10
+      - SSHWIFTY_HOOKTIMEOUT=30
+      - SSHWIFTY_LISTENINTERFACE=0.0.0.0
+      - SSHWIFTY_LISTENPORT=${PANEL_APP_PORT_HTTP}
+      - SSHWIFTY_INITIALTIMEOUT=0
+      - SSHWIFTY_READTIMEOUT=300
+      - SSHWIFTY_WRITETIMEOUT=300
+      - SSHWIFTY_HEARTBEATTIMEOUT=20
+      - SSHWIFTY_READDELAY=0
+      - SSHWIFTY_WRITEDELAY=0
+      - SSHWIFTY_HOSTNAME=
+      - SSHWIFTY_SHAREDKEY=
+    restart: unless-stopped
+    labels:  
+      createdBy: "Apps"
+...

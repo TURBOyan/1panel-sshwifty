@@ -1,0 +1,19 @@
+name: sshwifty
+tags:
+    - 安全
+title: web SSH客户端
+description: web SSH客户端
+additionalProperties:
+    key: sshwifty
+    name: sshwifty
+    tags:
+        - Security
+    shortDescZh: Sweb SSH客户端
+    shortDescEn: web SSH client
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 12
+    website: https://sshwifty-demo.nirui.org/
+    github: https://github.com/nirui/sshwifty
+    document: https://github.com/nirui/sshwifty/blob/master/README.md

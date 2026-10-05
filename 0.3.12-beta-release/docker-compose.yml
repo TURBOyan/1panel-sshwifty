@@ -1,0 +1,18 @@
+---
+services:
+  authelia:
+    image: 'niruix/sshwifty:0.3.12-beta-release'
+    container_name: ${CONTAINER_NAME}
+    network_mode: host
+    # volumes:
+    #   - ./sshwifty-src:/sshwifty-src
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8182"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    labels:  
+      createdBy: "Apps"
+...
