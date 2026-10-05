@@ -4,10 +4,14 @@ services:
     image: 'niruix/sshwifty:latest'
     container_name: ${CONTAINER_NAME}
     network_mode: host
+    volumes:
+      - ./sshwifty.conf.json:/etc/sshwifty/sshwifty.conf.json:ro
+      - ./ssh-keys:/etc/sshwifty/keys:ro
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Shanghai
+      - SSHWIFTY_CONFIG=/etc/sshwifty/sshwifty.conf.json
       - SSHWIFTY_DIALTIMEOUT=10
       - SSHWIFTY_HOOKTIMEOUT=30
       - SSHWIFTY_LISTENINTERFACE=0.0.0.0

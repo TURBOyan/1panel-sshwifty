@@ -1,0 +1,36 @@
+{
+  "HostName": "",
+  "SharedKey": "",
+  "DialTimeout": 10,
+  "HookTimeout": 30,
+  "Servers": [
+    {
+      "ListenInterface": "0.0.0.0",
+      "ListenPort": 8182,
+      "InitialTimeout": 0,
+      "ReadTimeout": 300,
+      "WriteTimeout": 300,
+      "HeartbeatTimeout": 20,
+      "ReadDelay": 0,
+      "WriteDelay": 0,
+      "TLSCertificateFile": "",
+      "TLSCertificateKeyFile": "",
+      "ServerMessage": ""
+    }
+  ],
+  "Presets": [
+    {
+      "Title": "Any Host (Key Auth) example",
+      "Type": "SSH",
+      "Host": "127.0.0.1:22",
+      "TabColor": "113322",
+      "Meta": {
+        "User": "root",
+        "Encoding": "utf-8",
+        "Authentication": "Private Key",
+        "Private Key": "file:///etc/sshwifty/keys/id_ed25519"
+      }
+    }
+  ],
+  "OnlyAllowPresetRemotes": false
+}
